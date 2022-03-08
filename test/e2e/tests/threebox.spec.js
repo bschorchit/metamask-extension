@@ -1,4 +1,3 @@
-//const { assert } = require('ses/src/error/assert');
 const { strict: assert } = require('assert');
 const { convertToHexValue, withFixtures, largeDelayMs } = require('../helpers');
 const ThreeboxMockServer = require('../mock-3box/threebox-mock-server');
@@ -85,21 +84,22 @@ describe('Threebox', function () {
         await driver.clickElement('.account-menu__icon');
         await driver.clickElement({ text: 'Settings', tag: 'div' });
 
-        //finds the jazzicon toggle turned on
+        // finds the jazzicon toggle turned on
         const jazzElement = await driver.findElement(
-          '[data-test-id="jazz_icon"]');
+          '[data-test-id="jazz_icon"]',
+        );
         const jazzElementCss = await jazzElement.getCssValue('border');
         assert.equal(jazzElementCss, '2px solid rgb(3, 125, 214)');
 
         const jazziconText = await driver.findElement({
           tag: 'h6',
-          text: 'Jazzicons'
+          text: 'Jazzicons',
         });
         assert.equal(await jazziconText.getText(), 'Jazzicons');
 
         const blockiesText = await driver.findElement({
           tag: 'h6',
-          text: 'Blockies'
+          text: 'Blockies',
         });
         assert.equal(await blockiesText.getText(), 'Blockies');
 
