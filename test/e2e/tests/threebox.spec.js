@@ -84,13 +84,14 @@ describe('Threebox', function () {
         await driver.clickElement('.account-menu__icon');
         await driver.clickElement({ text: 'Settings', tag: 'div' });
 
+        await driver.waitForSelector('[data-test-id="jazz_icon"]');
         // finds the jazzicon toggle turned on
         const jazzElement = await driver.findElement(
           '[data-test-id="jazz_icon"]',
         );
         const jazzElementCss = await jazzElement.getCssValue('border');
+        
         assert.equal(jazzElementCss, '2px solid rgb(3, 125, 214)');
-
         const jazziconText = await driver.findElement({
           tag: 'h6',
           text: 'Jazzicons',
