@@ -34,6 +34,21 @@ import IconPlus from '../../ui/icon/icon-plus';
 import IconImport from '../../ui/icon/icon-import';
 
 import Button from '../../ui/button';
+import Box from '../../ui/box';
+import Typography from '../../ui/typography';
+import {
+  ALIGN_ITEMS,
+  BLOCK_SIZES,
+  DISPLAY,
+  FLEX_DIRECTION,
+  FLEX_WRAP,
+  JUSTIFY_CONTENT,
+  COLORS,
+  TYPOGRAPHY,
+  FONT_WEIGHT,
+  SIZES,
+} from '../../../helpers/constants/design-system';
+import Spinner from '../../ui/spinner';
 import KeyRingLabel from './keyring-label';
 
 export function AccountMenuItem(props) {
@@ -77,6 +92,7 @@ export default class AccountMenu extends Component {
     accounts: PropTypes.array,
     history: PropTypes.object,
     isAccountMenuOpen: PropTypes.bool,
+    isLoading: PropTypes.bool,
     keyrings: PropTypes.array,
     lockMetamask: PropTypes.func,
     selectedAddress: PropTypes.string,
@@ -84,6 +100,7 @@ export default class AccountMenu extends Component {
     toggleAccountMenu: PropTypes.func,
     addressConnectedSubjectMap: PropTypes.object,
     originOfCurrentTab: PropTypes.string,
+    autoDetectAccounts: PropTypes.func,
   };
 
   accountsRef;
@@ -290,9 +307,12 @@ export default class AccountMenu extends Component {
     const {
       shouldShowAccountsSearch,
       isAccountMenuOpen,
+      isLoading,
       toggleAccountMenu,
       lockMetamask,
       history,
+      accounts,
+      autoDetectAccounts,
     } = this.props;
 
     if (!isAccountMenuOpen) {
@@ -309,33 +329,98 @@ export default class AccountMenu extends Component {
     return (
       <div className="account-menu">
         <div className="account-menu__close-area" onClick={toggleAccountMenu} />
-        <AccountMenuItem className="account-menu__header">
-          {t('myAccounts')}
-          <Button
-            className="account-menu__lock-button"
-            type="secondary"
-            onClick={() => {
-              lockMetamask();
-              history.push(DEFAULT_ROUTE);
-            }}
-          >
-            {t('lock')}
-          </Button>
-        </AccountMenuItem>
-        <div className="account-menu__divider" />
-        <div className="account-menu__accounts-container">
-          {shouldShowAccountsSearch ? this.renderAccountsSearch() : null}
-          <div
-            className="account-menu__accounts"
-            onScroll={this.onScroll}
-            ref={(ref) => {
-              this.accountsRef = ref;
-            }}
-          >
-            {this.renderAccounts()}
+        <Box className="account-menu__my-accounts">
+          {isLoading && (
+            <Box
+              display={DISPLAY.FLEX}
+              alignItems={ALIGN_ITEMS.CENTER}
+              justifyContent={JUSTIFY_CONTENT.CENTER}
+              backgroundColor={COLORS.BACKGROUND_DEFAULT}
+              className="account-menu__refreshing-accounts"
+            >
+              <Box
+                display={DISPLAY.FLEX}
+                flexDirection={FLEX_DIRECTION.COLUMN}
+                alignItems={ALIGN_ITEMS.CENTER}
+              >
+                <img
+                  className="account-menu__refreshing-accounts__logo"
+                  src="/images/logo/metamask-fox.svg"
+                  alt=""
+                />
+                <Box
+                  display={DISPLAY.FLEX}
+                  alignItems={ALIGN_ITEMS.CENTER}
+                  justifyContent={JUSTIFY_CONTENT.CENTER}
+                  flexDirection={FLEX_DIRECTION.ROW}
+                  backgroundColor={COLORS.BACKGROUND_ALTERNATIVE}
+                  padding={[0, 3, 0, 3]}
+                  borderRadius={SIZES.LG}
+                  marginTop={5}
+                  className="account-menu__refreshing-accounts__loader"
+                >
+                  <Spinner
+                    color="#F7C06C"
+                    className="account-menu__refreshing-accounts__loading-overlay__spinner"
+                  />
+                  <Typography
+                    variant={TYPOGRAPHY.H6}
+                    fontWeight={FONT_WEIGHT.NORMAL}
+                    color={COLORS.TEXT_ALTERNATIVE}
+                    boxProps={{ marginLeft: 2 }}
+                  >
+                    {t('refreshingAccounts')}
+                  </Typography>
+                </Box>
+              </Box>
+            </Box>
+          )}
+          <AccountMenuItem className="account-menu__header">
+            <Box
+              width={BLOCK_SIZES.FULL}
+              display={DISPLAY.FLEX}
+              alignItems={ALIGN_ITEMS.CENTER}
+              flexWrap={FLEX_WRAP.NO_WRAP}
+              flexDirection={FLEX_DIRECTION.ROW}
+              justifyContent={JUSTIFY_CONTENT.SPACE_BETWEEN}
+            >
+              {`${t('myAccounts')} (${accounts.length})`}
+              <Button
+                className="account-menu__lock-button"
+                onClick={() => {
+                  lockMetamask();
+                  history.push(DEFAULT_ROUTE);
+                }}
+              >
+                {t('lock')}
+              </Button>
+            </Box>
+            <Box>
+              <div
+                className="account-menu__refresh-button"
+                onClick={() => {
+                  autoDetectAccounts();
+                }}
+              >
+                {t('refreshAccounts')}
+              </div>
+            </Box>
+          </AccountMenuItem>
+          <div className="account-menu__divider" />
+          <div className="account-menu__accounts-container">
+            {shouldShowAccountsSearch ? this.renderAccountsSearch() : null}
+            <div
+              className="account-menu__accounts"
+              onScroll={this.onScroll}
+              ref={(ref) => {
+                this.accountsRef = ref;
+              }}
+            >
+              {this.renderAccounts()}
+            </div>
+            {this.renderScrollButton()}
           </div>
-          {this.renderScrollButton()}
-        </div>
+        </Box>
         <div className="account-menu__divider" />
         <AccountMenuItem
           onClick={() => {
