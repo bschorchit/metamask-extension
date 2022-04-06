@@ -90,7 +90,7 @@ describe('Threebox', function () {
           '[data-test-id="jazz_icon"]',
         );
         const jazzElementCss = await jazzElement.getCssValue('border');
-        
+
         assert.equal(jazzElementCss, '2px solid rgb(3, 125, 214)');
         const jazziconText = await driver.findElement({
           tag: 'h6',
