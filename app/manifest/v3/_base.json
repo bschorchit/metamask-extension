@@ -50,6 +50,7 @@
   "host_permissions": [
     "http://localhost:8545/",
     "https://*.infura.io/",
+    "https://chainid.network/chains.json",
     "https://lattice.gridplus.io/*",
     "*://*.eth/"
   ],
