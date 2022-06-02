@@ -216,8 +216,8 @@ export default function EditGasDisplay({
             hasGasErrors === false &&
             supportsEIP1559 && (
               <GasTiming
-                maxFeePerGas={maxFeePerGas}
-                maxPriorityFeePerGas={maxPriorityFeePerGas}
+                maxFeePerGas={maxFeePerGas.toString()}
+                maxPriorityFeePerGas={maxPriorityFeePerGas.toString()}
                 gasWarnings={gasWarnings}
               />
             )
