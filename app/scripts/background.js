@@ -193,6 +193,7 @@ async function loadStateFromPersistence() {
     });
   }
 
+  debugger;
   // return just the data
   return versionedData.data;
 }

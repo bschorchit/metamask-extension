@@ -40,6 +40,7 @@ export default function NativeAsset({ nativeCurrency }) {
         isEthNetwork={!rpcPrefs.blockExplorerUrl}
         optionsButton={
           <AssetOptions
+            onRemove={() => {}}
             isNativeAsset
             onClickBlockExplorer={() => {
               trackEvent({
