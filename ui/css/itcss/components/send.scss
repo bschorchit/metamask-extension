@@ -516,8 +516,8 @@
   }
 
   &__error-hex-data {
-    margin-top: 5px;
-    font-size: 0.7em;
+    @include H8;
+    margin-top: 4px;    
   }
 
   &__warning {
