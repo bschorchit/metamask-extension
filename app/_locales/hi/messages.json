@@ -62,6 +62,13 @@
     "message": "$1 एक्सेस कर सकता है और इस एसेट को खर्च कर सकता है",
     "description": "$1 is the url of the site requesting ability to spend"
   },
+  "accessYourWalletWithSRP": {
+    "message": "अपने गुप्त रिकवरी वाक्यांश का इस्तेमाल कर अपने वॉलेट तक पहुंच प्राप्त करें"
+  },
+  "accessYourWalletWithSRPDescription": {
+    "message": "मेटामास्क आपका पासवर्ड रिकवर नहीं कर सकता। हम आपके स्वामित्व को मान्य करने, आपके वॉलेट को रीस्टोर करने और एक नया पासवर्ड सेट करने के लिए आपके गुप्त रिकवरी वाक्यांश का उपयोग करेंगे। सबसे पहले, अपना वह गुप्त रिकवरी वाक्यांश दर्ज करें जिसे आपको अपना बटुआ बनाते समय दिया गया था। $1",
+    "description": "$1 is the words 'Learn More' from key 'learnMore', separated here so that it can be added as a link"
+  },
   "accessingYourCamera": {
     "message": "आपके कैमरे तक पहुँच रहा है..."
   },
@@ -152,6 +159,10 @@
   },
   "addNetwork": {
     "message": "नेटवर्क जोड़ें"
+  },
+  "addNetworkTooltipWarning": {
+    "message": "यह नेटवर्क कनेक्शन तृतीय पक्षों पर निर्भर करता है। यह कनेक्शन संभवतः कम विश्वसनीय है या तृतीय-पक्षों को एक्टिविटी को ट्रैक करने में सक्षम कर सकता है। $1",
+    "description": "$1 is Learn more link"
   },
   "addSuggestedTokens": {
     "message": "सुझाए गए टोकन जोड़ें"
@@ -400,6 +411,14 @@
     "message": "$1 खरीदें",
     "description": "$1 is the ticker symbol of a an asset the user is being prompted to purchase"
   },
+  "buyCryptoWithCoinbasePay": {
+    "message": "कॉइनबेस पे से $1 खरीदें",
+    "description": "$1 represents the crypto symbol to be purchased"
+  },
+  "buyCryptoWithCoinbasePayDescription": {
+    "message": "अपने कॉइनबेस अकाउंट के साथ आप क्रिप्टो को आसानी से खरीद या ट्रांसफर कर सकते हैं।",
+    "description": "$1 represents the crypto symbol to be purchased"
+  },
   "buyCryptoWithMoonPay": {
     "message": "MoonPay से $1 खरीदें",
     "description": "$1 represents the cypto symbol to be purchased"
@@ -605,6 +624,9 @@
   },
   "continue": {
     "message": "जारी रखें"
+  },
+  "continueToCoinbasePay": {
+    "message": "कॉइनबेस-पे पर जारी रहें"
   },
   "continueToMoonPay": {
     "message": "MoonPay के लिए जारी रखें"
@@ -1225,6 +1247,10 @@
     "message": "सभी Flask के API प्रयोगात्मक हैं। उन्हें बिना किसी सूचना के बदला या हटाया जा सकता है, या वो स्थायी MetaMask में माइग्रेट किए बिना अनिश्चित काल तक Flask पर रह सकते हैं। अपने जोखिम पर उनका उपयोग करें।",
     "description": "This message warns developers about unstable Flask APIs"
   },
+  "flaskWelcomeWarning4": {
+    "message": "Flask का उपयोग करते समय अपने नियमित MetaMask एक्सटेंशन को निष्क्रिय करना अवश्य सुनिश्चित करें।",
+    "description": "This message calls to pay attention about multiple versions of MetaMask running on the same site (Flask + Prod)"
+  },
   "flaskWelcomeWarningAcceptButton": {
     "message": "जोख़िमों को मैं स्वीकर करता हूं।",
     "description": "this text is shown on a button, which the user presses to confirm they understand the risks of using Flask"
@@ -1416,6 +1442,9 @@
   "hide": {
     "message": "छिपाएं"
   },
+  "hideFullTransactionDetails": {
+    "message": "लेन-देन की पूर्ण जानकारी छिपा कर रखें"
+  },
   "hideSeedPhrase": {
     "message": "सीड फ्रेज़ छुपा दें"
   },
@@ -1444,6 +1473,12 @@
   },
   "history": {
     "message": "इतिहास"
+  },
+  "ignoreAll": {
+    "message": "सभी को अनदेखा करें"
+  },
+  "ignoreTokenWarning": {
+    "message": "यदि आप टोकन छिपाते हैं, तो वे आपके वॉलेट में नहीं दिखाए जाएंगे। हालांकि, आप अभी भी उन्हें खोज कर जोड़ सकते हैं।"
   },
   "import": {
     "message": "आयात करें",
@@ -1493,6 +1528,10 @@
   },
   "importWallet": {
     "message": "वॉलेट आयात करें"
+  },
+  "importWithCount": {
+    "message": "$1 इम्पोर्ट करें",
+    "description": "$1 will the number of detected tokens that are selected for importing, if all of them are selected then $1 will be all"
   },
   "importYourExisting": {
     "message": "गुप्त रिकवरी फ्रेज का उपयोग करके अपने मौजूदा वॉलेट को आयात करें"
@@ -1687,6 +1726,9 @@
   },
   "levelArrow": {
     "message": "लेवल ऐरो"
+  },
+  "lightTheme": {
+    "message": "हल्की"
   },
   "likeToImportTokens": {
     "message": "क्या आप इन टोकन को इंपोर्ट करना चाहते हैं?"
@@ -2001,6 +2043,13 @@
   "newToMetaMask": {
     "message": "MetaMask पर नए हैं?"
   },
+  "newTokensImportedMessage": {
+    "message": "आपने सफलतापूर्वक $1 इम्पोर्ट कर लिया है।",
+    "description": "$1 is the string of symbols of all the tokens imported"
+  },
+  "newTokensImportedTitle": {
+    "message": "टोकन इम्पोर्ट हो गया"
+  },
   "newTotal": {
     "message": "नया कुलयोग"
   },
@@ -2301,6 +2350,12 @@
   "origin": {
     "message": "उत्पत्ति"
   },
+  "osTheme": {
+    "message": "सिस्टम"
+  },
+  "padlock": {
+    "message": "पैडलॉक"
+  },
   "parameters": {
     "message": "पैरामीटर"
   },
@@ -2371,6 +2426,10 @@
     "message": "पता, खाते की शेषराशि, गतिविधि देखें और लेन-देन शुरू करें",
     "description": "The description for the `eth_accounts` permission"
   },
+  "permission_longRunning": {
+    "message": "अनिश्चित काल तक चलाएं।",
+    "description": "The description for the `endowment:long-running` permission"
+  },
   "permission_manageBip44Keys": {
     "message": "आपके \"$1\" अकाउंट्स और एसेट्स नियंत्रित करें।",
     "description": "The description for the `snap_getBip44Entropy_*` permission. $1 is the name of a protocol, e.g. 'Filecoin'."
@@ -2399,6 +2458,9 @@
   "plusXMore": {
     "message": "+ $1 अधिक",
     "description": "$1 is a number of additional but unshown items in a list- this message will be shown in place of those items"
+  },
+  "popularCustomNetworks": {
+    "message": "लोकप्रिय कस्टम नेटवर्क"
   },
   "preferredLedgerConnectionType": {
     "message": "वरीयता वाले लेजर कनेक्शन के प्रकार",
@@ -3598,6 +3660,10 @@
   "tokenSymbol": {
     "message": "टोकन का प्रतीक"
   },
+  "tokensFoundTitle": {
+    "message": "$1 नए टोकन मिले",
+    "description": "$1 is the number of new tokens detected"
+  },
   "tooltipApproveButton": {
     "message": "मैं समझता हूं"
   },
@@ -3740,6 +3806,9 @@
   },
   "typePassword": {
     "message": "अपना MetaMask पासवर्ड टाइप करें"
+  },
+  "typeYourSRP": {
+    "message": "अपना गुप्त रिकवरी वाक्यांश लिखें"
   },
   "u2f": {
     "message": "U2F",
@@ -3899,6 +3968,9 @@
   },
   "walletCreationSuccessTitle": {
     "message": "वॉलेट का निर्माण सफल हुआ"
+  },
+  "warning": {
+    "message": "चेतावनी"
   },
   "weak": {
     "message": "कमज़ोर"

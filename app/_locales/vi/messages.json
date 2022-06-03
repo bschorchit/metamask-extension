@@ -62,6 +62,13 @@
     "message": "$1 có thể truy cập và chi tiêu tài sản này",
     "description": "$1 is the url of the site requesting ability to spend"
   },
+  "accessYourWalletWithSRP": {
+    "message": "Truy cập ví của bạn bằng Cụm từ khôi phục bí mật"
+  },
+  "accessYourWalletWithSRPDescription": {
+    "message": "MetaMask không thể khôi phục mật khẩu của bạn. Chúng tôi sẽ sử dụng Cụm từ khôi phục bí mật của bạn để xác thực quyền sở hữu, khôi phục ví và thiết lập mật khẩu mới. Trước tiên, hãy nhập Cụm từ khôi phục bí mật mà bạn đã được cấp khi tạo ví. $1",
+    "description": "$1 is the words 'Learn More' from key 'learnMore', separated here so that it can be added as a link"
+  },
   "accessingYourCamera": {
     "message": "Đang truy cập máy ảnh..."
   },
@@ -152,6 +159,10 @@
   },
   "addNetwork": {
     "message": "Thêm mạng"
+  },
+  "addNetworkTooltipWarning": {
+    "message": "Kết nối mạng này dựa vào các bên thứ ba. Kết nối này có thể kém tin cậy hơn hoặc cho phép các bên thứ ba theo dõi hoạt động. $1",
+    "description": "$1 is Learn more link"
   },
   "addSuggestedTokens": {
     "message": "Thêm token được đề xuất"
@@ -400,6 +411,14 @@
     "message": "Mua $1",
     "description": "$1 is the ticker symbol of a an asset the user is being prompted to purchase"
   },
+  "buyCryptoWithCoinbasePay": {
+    "message": "Mua $1 bằng Coinbase Pay",
+    "description": "$1 represents the crypto symbol to be purchased"
+  },
+  "buyCryptoWithCoinbasePayDescription": {
+    "message": "Bạn có thể dễ dàng mua hoặc chuyển khoản tiền điện tử bằng tài khoản Coinbase của mình.",
+    "description": "$1 represents the crypto symbol to be purchased"
+  },
   "buyCryptoWithMoonPay": {
     "message": "Mua $1 bằng MoonPay",
     "description": "$1 represents the cypto symbol to be purchased"
@@ -605,6 +624,9 @@
   },
   "continue": {
     "message": "Tiếp tục"
+  },
+  "continueToCoinbasePay": {
+    "message": "Tiếp tục đến Coinbase Pay"
   },
   "continueToMoonPay": {
     "message": "Tiếp tục đến MoonPay"
@@ -1225,6 +1247,10 @@
     "message": "Tất cả các API của Flask đều là thử nghiệm. Chúng có thể bị thay đổi hoặc xóa mà không cần thông báo, hoặc chúng có thể ở trên Flask vô thời hạn mà không bao giờ được chuyển sang phiên bản MetaMask ổn định. Bạn phải tự chịu rủi ro khi sử dụng chúng.",
     "description": "This message warns developers about unstable Flask APIs"
   },
+  "flaskWelcomeWarning4": {
+    "message": "Đảm bảo bạn đã tắt tiện ích mở rộng MetaMask thông thường khi sử dụng Flask.",
+    "description": "This message calls to pay attention about multiple versions of MetaMask running on the same site (Flask + Prod)"
+  },
   "flaskWelcomeWarningAcceptButton": {
     "message": "Tôi chấp nhận những rủi ro này",
     "description": "this text is shown on a button, which the user presses to confirm they understand the risks of using Flask"
@@ -1416,6 +1442,9 @@
   "hide": {
     "message": "Ẩn"
   },
+  "hideFullTransactionDetails": {
+    "message": "Ẩn chi tiết giao dịch đầy đủ"
+  },
   "hideSeedPhrase": {
     "message": "Ẩn cụm từ khôi phục bí mật"
   },
@@ -1444,6 +1473,12 @@
   },
   "history": {
     "message": "Lịch sử"
+  },
+  "ignoreAll": {
+    "message": "Bỏ qua tất cả"
+  },
+  "ignoreTokenWarning": {
+    "message": "Nếu bạn ẩn token, chúng sẽ không hiển thị trong ví của bạn. Tuy nhiên, bạn vẫn có thể thêm chúng thông qua tìm kiếm."
   },
   "import": {
     "message": "Nhập",
@@ -1493,6 +1528,10 @@
   },
   "importWallet": {
     "message": "Nhập ví"
+  },
+  "importWithCount": {
+    "message": "Nhập $1",
+    "description": "$1 will the number of detected tokens that are selected for importing, if all of them are selected then $1 will be all"
   },
   "importYourExisting": {
     "message": "Nhập ví hiện tại của bạn bằng Cụm mật khẩu khôi phục bí mật"
@@ -1687,6 +1726,9 @@
   },
   "levelArrow": {
     "message": "mũi tên cấp độ"
+  },
+  "lightTheme": {
+    "message": "Sáng"
   },
   "likeToImportTokens": {
     "message": "Bạn có muốn nhập những token này không?"
@@ -2001,6 +2043,13 @@
   "newToMetaMask": {
     "message": "Bạn mới sử dụng MetaMask?"
   },
+  "newTokensImportedMessage": {
+    "message": "Bạn đã nhập thành công $1.",
+    "description": "$1 is the string of symbols of all the tokens imported"
+  },
+  "newTokensImportedTitle": {
+    "message": "Đã nhập token"
+  },
   "newTotal": {
     "message": "Tổng mới"
   },
@@ -2301,6 +2350,12 @@
   "origin": {
     "message": "Nguồn gốc"
   },
+  "osTheme": {
+    "message": "Hệ thống"
+  },
+  "padlock": {
+    "message": "Ổ khóa"
+  },
   "parameters": {
     "message": "Tham số"
   },
@@ -2371,6 +2426,10 @@
     "message": "Xem địa chỉ, số dư tài khoản, hoạt động và bắt đầu giao dịch",
     "description": "The description for the `eth_accounts` permission"
   },
+  "permission_longRunning": {
+    "message": "Chạy không giới hạn.",
+    "description": "The description for the `endowment:long-running` permission"
+  },
   "permission_manageBip44Keys": {
     "message": "Kiểm soát các tài khoản và tài sản \"$1\" của bạn.",
     "description": "The description for the `snap_getBip44Entropy_*` permission. $1 is the name of a protocol, e.g. 'Filecoin'."
@@ -2399,6 +2458,9 @@
   "plusXMore": {
     "message": "+ $1 khác",
     "description": "$1 is a number of additional but unshown items in a list- this message will be shown in place of those items"
+  },
+  "popularCustomNetworks": {
+    "message": "Mạng tùy chỉnh phổ biến"
   },
   "preferredLedgerConnectionType": {
     "message": "Dạng Kết Nối Ledger Ưu Tiên",
@@ -3598,6 +3660,10 @@
   "tokenSymbol": {
     "message": "Ký hiệu token"
   },
+  "tokensFoundTitle": {
+    "message": "Đã tìm thấy $1 token mới",
+    "description": "$1 is the number of new tokens detected"
+  },
   "tooltipApproveButton": {
     "message": "Tôi đã hiểu"
   },
@@ -3740,6 +3806,9 @@
   },
   "typePassword": {
     "message": "Nhập mật khẩu MetaMask của bạn"
+  },
+  "typeYourSRP": {
+    "message": "Nhập Cụm từ khôi phục bí mật của bạn"
   },
   "u2f": {
     "message": "U2F",
@@ -3899,6 +3968,9 @@
   },
   "walletCreationSuccessTitle": {
     "message": "Tạo ví thành công"
+  },
+  "warning": {
+    "message": "Cảnh báo"
   },
   "weak": {
     "message": "Yếu"
